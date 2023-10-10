@@ -1,2 +1,18 @@
-
+.header {
+    width: 100vw;
+    height: 60px;
+    background-image: url(../images/fondonubes.jpeg);
+    background-repeat: repeat;
+    background-position: center;
+    &__title {
+        font-family: $font-header;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        width: 100vw;
+        height: 60px;
+        font-size: 36px;
+    }
+}
 

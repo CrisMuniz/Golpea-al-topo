@@ -1,0 +1,48 @@
+.main {
+    width: 100vw;
+    background-color: aqua;
+    &__title1 {
+        font-family: $font-title;
+        padding-top: 20px;
+        padding-bottom: 10px;
+    }
+    &__parr1 {
+        font-family: $font-parr;
+        padding-bottom: 10px;
+
+    }
+    &__title2 {
+        font-family: $font-title;
+        padding-top: 20px;
+        padding-bottom: 10px;
+    }
+    &__parr2 {
+        font-family: $font-parr;
+        padding-bottom: 10px;
+    }
+    &__title3 {
+        font-family: $font-title;
+        padding-top: 20px;
+        padding-bottom: 10px;
+    }
+    &__parr3 {
+        font-family: $font-parr;
+        padding-bottom: 10px;
+    }
+}
+.container {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    margin-left: -170px;
+}
+.grid {
+    display: grid;
+	grid-template-columns:1fr 1fr 1fr;
+	width: 90px;
+    &__square {
+        width: 90px;
+	    height: 90px;
+	    border: 1px solid black;
+    }
+}
