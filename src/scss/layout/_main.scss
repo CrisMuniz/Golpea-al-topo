@@ -1,6 +1,15 @@
+.page {
+    background-color: black;
+}
 .main {
     width: 100vw;
     background-color: aqua;
+    padding-bottom: 80px;
+    max-width: 1100px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 50px;
+    padding: 15px 20px;
     &__title1 {
         font-family: $font-title;
         padding-top: 20px;
@@ -34,7 +43,8 @@
     display: flex;
     flex-direction: row;
     justify-content: center;
-    margin-left: -170px;
+    margin-left: -190px;
+    padding-top: 70px;
 }
 .grid {
     display: grid;
@@ -43,6 +53,11 @@
     &__square {
         width: 90px;
 	    height: 90px;
-	    border: 1px solid black;
+	    border: 2px solid black;
     }
+}
+.mole {
+    background-image: url(../images/topo1.jpeg);
+    background-repeat: no-repeat;
+    background-size: cover;
 }

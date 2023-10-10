@@ -1,0 +1,18 @@
+.footer-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    background-color:black ;
+}
+.footer {
+    background-color: blueviolet;
+    height: 40px;
+    width: 1100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    &__copy {
+        font-family: $font-title;
+        font-size: 16px;
+    }
+}
