@@ -5,8 +5,11 @@
     background-color:black ;
 }
 .footer {
-    background-color: blueviolet;
-    height: 40px;
+    //background-color: blueviolet;
+    background-image: url(../images/hoyos.jpeg);
+    background-repeat: repeat;
+    background-position:bottom;
+    height: 90px;
     width: 1100px;
     display: flex;
     justify-content: center;

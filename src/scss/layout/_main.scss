@@ -3,40 +3,87 @@
 }
 .main {
     width: 100vw;
-    background-color: aqua;
     padding-bottom: 80px;
+    background-image: url(../images/galeriaTopo.jpeg);
+    background-position: center;
+    background-size:cover;
+    background-repeat:no-repeat;
+    background-attachment:fixed;
     max-width: 1100px;
     margin-left: auto;
     margin-right: auto;
-    margin-top: 50px;
+    margin-top: 90px;
     padding: 15px 20px;
     &__title1 {
         font-family: $font-title;
+        color:$color-letter;
         padding-top: 20px;
         padding-bottom: 10px;
     }
     &__parr1 {
         font-family: $font-parr;
+        color:$color-letter;
         padding-bottom: 10px;
 
     }
     &__title2 {
         font-family: $font-title;
+        color:$color-letter;
         padding-top: 20px;
         padding-bottom: 10px;
     }
     &__parr2 {
         font-family: $font-parr;
+        color:$color-letter;
         padding-bottom: 10px;
     }
     &__title3 {
         font-family: $font-title;
+        color:$color-letter;
         padding-top: 20px;
         padding-bottom: 10px;
     }
     &__parr3 {
         font-family: $font-parr;
+        color:$color-letter;
         padding-bottom: 10px;
+    }
+    &__btn {
+        display: flex;
+        justify-content: center;
+        height: 40px;
+        &--1 {
+            width: 100px;
+            border-radius: 10px;
+            font-family: $font-title;
+            background: $color-letter;
+            color:rgb(13, 238, 17);
+            position: relative;
+            z-index: 1;
+            overflow: hidden;
+            display: inline-block;
+        }
+        &--1:hover {
+            color:$color-letter;
+        }
+        &--1::after {
+            content: "";
+            background: rgb(13, 238, 17);
+            position: absolute;
+            z-index: -1;
+            padding: 16px 20px;
+            display: block;
+            left: 0;
+            right: 0;
+            top: 0;
+            bottom: 0;
+            transform: scale(0, 0) rotate(-180deg);
+            transition: all 0.3s ease;
+        }
+        &--1:hover::after{
+            transition: all 0.3s ease-out;
+            transform: scale(1, 1) rotate(0deg);
+        }
     }
 }
 .container {
@@ -44,16 +91,17 @@
     flex-direction: row;
     justify-content: center;
     margin-left: -190px;
-    padding-top: 70px;
+    padding-top: 50px;
 }
 .grid {
     display: grid;
 	grid-template-columns:1fr 1fr 1fr;
 	width: 90px;
+    padding-bottom: 30px;
     &__square {
         width: 90px;
 	    height: 90px;
-	    border: 2px solid black;
+	    border: 2px solid $color-letter;
     }
 }
 .mole {
