@@ -1,14 +1,32 @@
 'use strict';
 
-const square = document.querySelectorAll('js_square');
-//const mole = document.querySelectorAll('js_mole');
+// Query Selector
+const square = document.querySelectorAll('.js_square');
 const timeleft = document.querySelector('#timeLeft');
 const score = document.getElementById('score');
+const btn = document.querySelector('.js_btn');
 
-
+// Variables globales
 let result = 0;
 let currentTime = timeleft.textContent;
+let hitPosition = null;
+let timerId = null;
+let timeMole = null;
 
+// Creamos una función manejadora de evento donde una vez clicamos el botón comience a funcionar todas las funciones del juego.
+function handleClick(event){
+  event.preventDefault();
+  randomSquare();
+  time();
+  moveMole();
+
+}
+
+// Evento
+btn.addEventListener('click',handleClick);
+
+
+// Función para ir cambiando la imagen de topo aleatoriamente y también ir obteniendo la posición del recuadro que se clica.
 function randomSquare(){
   square.forEach(className => {
     className.classList.remove('mole');
@@ -19,31 +37,38 @@ function randomSquare(){
   hitPosition = randomPosition.id;
 }
 
+// Recorremos cada recuadro con un evento click y con un condicional igualamos la opcion clicada con el id de ese recuadro y lo metemos en un acumulador para ir contando los topos golpeados.
 square.forEach( id => {
   id.addEventListener('click', () => {
     if(id.id === hitPosition) {
       result = result + 1;
       score.textContent = result;
-      hitPosition = null;
     }
   });
 });
 
+// Función donde vamos retipiendo de forma reiterada la función randomSquare.
 function moveMole () {
-  let timerId = null;
-  timerId = setInterval(randomSquare, 1000);
+  timeMole = setInterval(randomSquare, 700);
 }
 
-moveMole();
-
+// Función de contador de tiempo donde evaluamos una condición en la que si el currentTime llega a 0 nos limpie 2 variables y nos salga un mensaje de alerta.
 function countDown() {
   currentTime--;
   timeleft.textContent = currentTime;
   if(currentTime === 0) {
     clearInterval(timerId);
-    clearInterval(hitPosition);
+    clearInterval(timeMole);
     alert('Game Over! tu puntuación final es: '+ result);
   }
+
 }
 
-let timerId = setInterval(countDown, 1000);
+// Función donde vamos repitiendo de forma reiterada la función countDown.
+function time () {
+  timerId = setInterval(countDown, 700);
+}
+
+
+
+
