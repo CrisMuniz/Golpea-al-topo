@@ -3,44 +3,62 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Golpea al Topo</title>
+    <title>Golpea al topo</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Berkshire+Swash&family=Convergence&family=Schoolbell&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Berkshire+Swash&family=Convergence&family=Schoolbell&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="./assets/css/main.css" />
     <link rel="icon" href="./assets/images/favicon.png" />
   </head>
 
   <body>
+      <div class="header-container">
       <header class="header" >
-       <h1 class="header__title">Golpea al Topo</h1>    
+       <h1 class="header__title">Golpea al Topo</h1>
       </header>
-
-      <main >
-      <h2>Procedimiento del juego:</h2>
-      <p>Este juego consiste en ir clicando con el raton cada vez que aparezca el topo en los diferentes recuadros.Cuantos más topos golpees más puntos conseguirás</p>
-      <h2>Topo-puntos:</h2>
-      <h2>0</h2>
-      <h2>Tiempo restante:</h2>
-      <h2>60</h2>
-      <div>
-              <div class="square" id="1"></div>
-      		<div class="square mole" id="2"></div>
-      		<div class="square" id="3"></div>
-      		<div class="square" id="4"></div>
-      		<div class="square" id="5"></div>
-      		<div class="square" id="6"></div>
-      		<div class="square" id="7"></div>
-      		<div class="square" id="8"></div>
-      		<div class="square" id="9"></div>
+      </div>
+      <div class="page">
+      <main class="main" >
+      <h2 class="main__title1">Cómo jugar:</h2>
+      <p class="main__parr1">Este juego consiste en ir clicando con el ratón en la imagen que aparecerá de un topo. Cuantas más veces golpees al topo más puntos obtendrás. </p>
+      <div class="cont">
+      <div class="cont1">
+      <h2 class="main__title2">Topo-puntos:</h2>
+      <p class="main__parr2" id="score">0</p>
+      </div>
+      <div class="cont2">
+      <h3 class="main__title3">Tiempo restante:</h3>
+      <p class="main__parr3" id="timeLeft">60</p>
+      </div>
+      </div>
+      <div class="main__btn">
+      <button class=" main__btn--1 js_btn">Comenzar</button>
+      </div>
+      <div class="main__reset">
+      	<button class="main__reset--2 js_reset">&#8634</button>
+      </div>
+      <div class="container">
+      <div class="grid">
+          <div class="grid__square js_square" id="1"></div>
+      		<div class="grid__square mole js_square" id="2"></div>
+      		<div class="grid__square js_square" id="3"></div>
+      		<div class="grid__square js_square" id="4"></div>
+      		<div class="grid__square js_square" id="5"></div>
+      		<div class="grid__square js_square" id="6"></div>
+      		<div class="grid__square js_square" id="7"></div>
+      		<div class="grid__square js_square" id="8"></div>
+      		<div class="grid__square js_square" id="9"></div>
+      </div>
       </div>
       </main>
-
-      <footer >
-       
+      </div>
+      <div class="footer-container">
+      <footer class="footer" >
+       <div class="footer__copy">
+          &#169; 2023 Cris Muñiz
+       </div>
       </footer>
-
-
+      </div>
     <script src="./assets/js/main.js"></script>
   </body>
 </html>
