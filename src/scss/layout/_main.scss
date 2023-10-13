@@ -3,10 +3,9 @@
 }
 .main {
     width: 100vw;
-    padding-bottom: 80px;
     background-image: url(../images/galeriaTopo.jpeg);
     background-position: center;
-    background-size:cover;
+    background-size:1100px;
     background-repeat:no-repeat;
     background-attachment:fixed;
     max-width: 1100px;
@@ -19,11 +18,13 @@
         color:$color-letter;
         padding-top: 20px;
         padding-bottom: 10px;
+        font-size:28px;
     }
     &__parr1 {
         font-family: $font-parr;
         color:$color-letter;
         padding-bottom: 10px;
+        font-size: 18px;
 
     }
     &__title2 {
@@ -31,22 +32,26 @@
         color:$color-letter;
         padding-top: 20px;
         padding-bottom: 10px;
+        font-size: 20px;
     }
     &__parr2 {
         font-family: $font-parr;
         color:$color-letter;
         padding-bottom: 10px;
+        font-size: 18px;
     }
     &__title3 {
         font-family: $font-title;
         color:$color-letter;
         padding-top: 20px;
         padding-bottom: 10px;
+        font-size: 20px;
     }
     &__parr3 {
         font-family: $font-parr;
         color:$color-letter;
         padding-bottom: 10px;
+        font-size: 18px;
     }
     &__btn {
         display: flex;
@@ -57,7 +62,7 @@
             border-radius: 10px;
             font-family: $font-title;
             background: $color-letter;
-            color:rgb(13, 238, 17);
+            color:$color-btn;
             position: relative;
             z-index: 1;
             overflow: hidden;
@@ -68,7 +73,7 @@
         }
         &--1::after {
             content: "";
-            background: rgb(13, 238, 17);
+            background: $color-btn;
             position: absolute;
             z-index: -1;
             padding: 16px 20px;
@@ -109,4 +114,63 @@
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
+}
+
+@media screen and (min-width: 768px) {
+    .main {
+        &__title1 {
+            font-size: 32px;
+        }
+        &__parr1 {
+            font-size: 22px;
+        }
+        &__title2 {
+            font-size: 24px;
+        }
+        &__parr2 {
+            font-size: 20px;
+            padding-top: 24px;
+            margin-left: 10px;
+        }
+        &__title3 {
+            font-size: 24px;
+        }
+        &__parr3 {
+            font-size: 20px;
+            padding-top: 24px;
+            margin-left: 10px;
+        }
+        &__btn {
+            height: 50px;
+            &--1 {
+                font-size: 18px;
+            }
+        }
+        .cont {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-around;
+        }
+        .cont1 {
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            justify-content: center;
+
+        }
+        .cont2 {
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            justify-content: center;
+        }
+
+    }
+    .grid {
+        width: 170px;
+        &__square {
+            width: 120px;
+            height: 120px;
+        }
+    }
 }

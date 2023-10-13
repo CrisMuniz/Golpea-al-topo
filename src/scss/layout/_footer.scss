@@ -5,7 +5,6 @@
     background-color:black ;
 }
 .footer {
-    //background-color: blueviolet;
     background-image: url(../images/hoyos.jpeg);
     background-repeat: repeat;
     background-position:bottom;
@@ -15,7 +14,16 @@
     justify-content: center;
     align-items: center;
     &__copy {
-        font-family: $font-title;
+        font-family: $font-header;
+        text-shadow: 2px 2px $color-letter;
         font-size: 16px;
+    }
+}
+
+@media screen and (min-width: 768px) {
+    .footer {
+        &__copy {
+            font-size: 24px;
+        }
     }
 }
