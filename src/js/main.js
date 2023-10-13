@@ -2,9 +2,10 @@
 
 // Query Selector
 const square = document.querySelectorAll('.js_square');
-const timeleft = document.querySelector('#timeLeft');
-const score = document.getElementById('score');
+let timeleft = document.querySelector('#timeLeft');
+let score = document.getElementById('score');
 const btn = document.querySelector('.js_btn');
+const reset = document.querySelector('.js_reset');
 
 // Variables globales
 let result = 0;
@@ -22,7 +23,7 @@ function handleClick(event){
 
 }
 
-// Evento
+// Evento de comenzar juego
 btn.addEventListener('click',handleClick);
 
 
@@ -69,6 +70,14 @@ function time () {
   timerId = setInterval(countDown, 700);
 }
 
+// Creamos la función manejadora  de reestablecer el juego y así poder empezar a jugar de nuevo. 
+function handleReset() {
+  timeleft.textContent = 60;
+  score.textContent = 0;
+  result = 0;
+  currentTime = 60;
+}
 
-
+// Evento de reestablecer el juego.
+reset.addEventListener('click', handleReset);
 
