@@ -70,7 +70,7 @@ function time () {
   timerId = setInterval(countDown, 700);
 }
 
-// Creamos la función manejadora  de reestablecer el juego y así poder empezar a jugar de nuevo. 
+// Creamos la función manejadora  de reestablecer el juego y así poder empezar a jugar de nuevo.
 function handleReset() {
   timeleft.textContent = 60;
   score.textContent = 0;
